@@ -15,6 +15,9 @@ manifest:
     - name: zireael-zmk-module
       remote: proostas
       revision: main
+    - name: dao-zmk-module
+      remote: proostas
+      revision: main
     - name: zmk-antecedent-morph
       remote: proostas
       revision: main

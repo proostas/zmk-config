@@ -5,6 +5,8 @@ include:
     shield: ergonaut_one_right
   - board: seeeduino_xiao_ble
     shield: settings_reset
+  - board: dao_left
+  - board: dao_right
   - board: zireael_left
   - board: zireael_right
   - board: nice_nano_v2
