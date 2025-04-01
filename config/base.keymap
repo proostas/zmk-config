@@ -287,7 +287,7 @@
             combo_caps_word {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <16 19>;
-                layers = <ENG EPP RUS>;
+                layers = <ENG EPP>;
                 bindings = <&caps_word>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
