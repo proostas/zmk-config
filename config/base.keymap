@@ -277,11 +277,11 @@
                 bindings = <&to_english>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
-            combo_key_repeat {
+            combo_key_capslock {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <17 18>;
                 layers = <ENG EPP RUS>;
-                bindings = <&key_repeat>;
+                bindings = <&kp CAPSLOCK>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_caps_word {
