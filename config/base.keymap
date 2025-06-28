@@ -265,14 +265,14 @@
             };
             combo_switch_to_rus {
                 timeout-ms = <U_COMBO_TIMEOUT>;
-                key-positions = <38 39>;
+                key-positions = <3 8>;
                 layers = <ENG EPP>;
                 bindings = <&to_russian>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_switch_to_eng {
                 timeout-ms = <U_COMBO_TIMEOUT>;
-                key-positions = <38 39>;
+                key-positions = <3 8>;
                 layers = <RUS>;
                 bindings = <&to_english>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
