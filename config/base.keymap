@@ -251,35 +251,35 @@
             compatible = "zmk,combos";
             combo_force_rus {
                 timeout-ms = <U_COMBO_TIMEOUT>;
-                key-positions = <24 35>;
+                key-positions = <36 41>;
                 layers = <RUS>;
                 bindings = <&kp U_TO_RUS_SCUT>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_force_eng {
                 timeout-ms = <U_COMBO_TIMEOUT>;
-                key-positions = <24 35>;
+                key-positions = <36 41>;
                 layers = <ENG EPP>;
                 bindings = <&kp U_TO_ENG_SCUT>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_switch_to_rus {
                 timeout-ms = <U_COMBO_TIMEOUT>;
-                key-positions = <36 41>;
+                key-positions = <0 11>;
                 layers = <ENG EPP>;
                 bindings = <&to_russian>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_switch_to_eng {
                 timeout-ms = <U_COMBO_TIMEOUT>;
-                key-positions = <36 41>;
+                key-positions = <0 11>;
                 layers = <RUS>;
                 bindings = <&to_english>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_key_capslock {
                 timeout-ms = <U_COMBO_TIMEOUT>;
-                key-positions = <0 11>;
+                key-positions = <24 35>;
                 layers = <ENG EPP RUS>;
                 bindings = <&kp CAPSLOCK>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
