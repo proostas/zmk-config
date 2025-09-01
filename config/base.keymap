@@ -299,30 +299,30 @@
                 english_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // | AMNW  |   Q   |   W   |   F   |   P   |   B   |     |   J   |   L   |   U   |   Y   |   "   |  AMNE |
-// | LEADR |   A   |   R   |   S   |   T   |   G   |     |   M   |   N   |   E   |   I   |   O   |   AME |
+// | AMW   |   A   |   R   |   S   |   T   |   G   |     |   M   |   N   |   E   |   I   |   O   |   AME |
 // | AMSW  |   Z   |   X   |   C   |   D   |   V   |     |   K   |   H   |   ,   |   .   |   /   |  AMSE |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  DEL  |  BKSP |  RET  |     |  TAB  | SPACE |  ESC  |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amennw  &kp Q         &kp W         &kp F         &kp P             &kp B         &kp J         &kp L            &kp U         &kp Y        &kp SQT       &amenne       
-          &none     &lmt LGUI A   &lmt LALT R   &lsht LSHFT S &lmt LCTRL T      &kp G         &kp M         &rmt RCTRL N     &rsht RSHFT E &rmt RALT I  &rmt RGUI O   &amene
-          &amensw  &kp Z         &kp X         &kp C         &kp D             &kp V         &kp K         &kp H            &kp COMMA     &kp DOT      &kp FSLH      &amense
+          &amennwm  &kp Q         &kp W         &kp F         &kp P             &kp B         &kp J         &kp L            &kp U         &kp Y        &kp SQT       &amennem       
+          &amenwm   &lmt LGUI A   &lmt LALT R   &lsht LSHFT S &lmt LCTRL T      &kp G         &kp M         &rmt RCTRL N     &rsht RSHFT E &rmt RALT I  &rmt RGUI O   &amenem
+          &amenswm  &kp Z         &kp X         &kp C         &kp D             &kp V         &kp K         &kp H            &kp COMMA     &kp DOT      &kp FSLH      &amensem
                                             &lt MED DEL   &lt ENN BSPC   &mlt MOS RET   &lt SYE TAB   &lt NUE SPACE  &lt FUN ESC
                         >;
                 };
                 english_cpp_overlay {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // | AMNW  |   Q   |   W   |   F   |   P   |   B   |     |   J   |   L   |   U   |   Y   |   "   |  AMNE |
-// | LEADR |   A   |   R   |   S   |   T   |   G   |     |   M   |   N   |   E   |   I   |   O   |   AME |
+// | AMW   |   A   |   R   |   S   |   T   |   G   |     |   M   |   N   |   E   |   I   |   O   |   AME |
 // | AMSW  |   Z   |   X   |   C   |   D   |   V   |     |   K   |   H   |   ,   |   .   |   /   |  AMSE |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  DEL  |  BKSP |  RET  |     |  TAB  | SPACE |  ESC  |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amcppnw  &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppne       
-          &trans    &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppe
-          &amcppsw  &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppse
+          &amcppnwm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppnem       
+          &amcppwm  &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppem
+          &amcppswm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppsem
                                             &trans      &trans     &trans    &trans    &trans     &trans
                         >;
                 };
@@ -335,9 +335,9 @@
 //                         |       |  (0)  |       |     |  TAB  | SPACE |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &none     &kp ESC       &kp CAPS      &to_russian   &tog RUS          &none         &kp PG_UP     &kp HOME         &kp UP        &kp END      &kp INS       &amennavne
-          &none     &kp LGUI      &kp LALT      &kp LSHFT     &kp LCTRL         &tog BTN      &kp PG_DN     &kp LEFT         &kp DOWN      &kp RIGHT    &kp DEL       &amennave
-          &none     &none         &none         &none         &none             &none         &none         &caps_word       &kp K_CMENU   &none        &none         &amennavse
+          &none     &kp ESC       &kp CAPS      &to_russian   &tog RUS          &none         &kp PG_UP     &kp HOME         &kp UP        &kp END      &kp INS       &amennavnem
+          &none     &kp LGUI      &kp LALT      &kp LSHFT     &kp LCTRL         &tog BTN      &kp PG_DN     &kp LEFT         &kp DOWN      &kp RIGHT    &kp DEL       &amennavem
+          &none     &none         &none         &none         &none             &none         &none         &caps_word       &kp K_CMENU   &none        &none         &amennavsem
                                             &none     &trans          &trans         &kp TAB       &kp SPACE       &none
                         >;
                 };
@@ -350,9 +350,9 @@
 //                         |  ./,  |  0/&  |   -   |     |       |  (0)  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amennumnw   &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
-          &amennumw    &kp SEMI      &kp N4        &kp N5        &kp N6            &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
-          &amennumsw   &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &none          &none
+          &amennumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
+          &amennumwm   &kp SEMI      &kp N4        &kp N5        &kp N6            &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &amennumswm  &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &none          &none
                                             &numdorc  &num0           &kp MINUS    &trans        &trans         &none
                         >;
                 };
@@ -365,16 +365,16 @@
 //                         |   ,   |   &   |   _   |     |  (0)  |       |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amensymnw  &kp LBRC      &kp LPAR      &kp ASTERISK  &kp RPAR          &kp RBRC      &none         &none             &kp SPACE     &none      &kp ESC        &none           
-          &amensymw   &kp COLON     &kp DOLLAR    &kp PERCENT   &kp CARET         &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
-          &amensymsw  &kp TILDE     &kp EXCL      &kp AT_SIGN   &kp HASH          &kp PIPE      &none         &none             &none         &none      &none          &none
+          &amensymnwm &kp LBRC      &kp LPAR      &kp ASTERISK  &kp RPAR          &kp RBRC      &none         &none             &kp SPACE     &none      &kp ESC        &none           
+          &amensymwm  &kp COLON     &kp DOLLAR    &kp PERCENT   &kp CARET         &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &amensymswm &kp TILDE     &kp EXCL      &kp AT_SIGN   &kp HASH          &kp PIPE      &none         &none             &none         &none      &none          &none
                                             &kp COMMA  &kp AMPS     &kp UNDER    &trans        &trans          &trans
                         >;
                 };
                 russian_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // |   Ё   |   Ц   |  ь/ъ  |   Я   |  ,/?  |  ./!  |     |   З   |   В   |   К   |   Д   |   Ч   |   Ш   |
-// | LEADR |   У   |   И   |   Е   |   О   |   А   |     |   Л   |   Н   |   Т   |   С   |   Р   |   Й   |
+// |       |   У   |   И   |   Е   |   О   |   А   |     |   Л   |   Н   |   Т   |   С   |   Р   |   Й   |
 // |  Ь/Ъ  |   Ф   |   Э   |   Х   |   Ы   |   Ю   |     |   Б   |   М   |   П   |   Г   |   Ж   |   Щ   |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  DEL  |  BKSP |  RET  |     |  TAB  | SPACE |  ESC  |
@@ -441,9 +441,9 @@
 //                         |       |  BKSP |  RET  |     |       |       |  (0)  |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amenfunnw  &kp F12       &kp F7        &kp F8        &kp F9            &kp PSCRN       &none       &none             &mo FN2       &none       &kp ESC        &none   
-          &amenfunw   &kp F11       &kp F4        &kp F5        &kp F6            &kp SLCK        &none       &kp RCTRL         &kp RSHFT     &kp RALT    &kp RGUI       &none
-          &amenfunsw  &kp F10       &kp F1        &kp F2        &kp F3            &kp PAUSE_BREAK &none       &none             &none         &none       &none          &none
+          &amenfunnwm &kp F12       &kp F7        &kp F8        &kp F9            &kp PSCRN       &none       &none             &mo FN2       &none       &kp ESC        &none   
+          &amenfunwm  &kp F11       &kp F4        &kp F5        &kp F6            &kp SLCK        &none       &kp RCTRL         &kp RSHFT     &kp RALT    &kp RGUI       &none
+          &amenfunswm &kp F10       &kp F1        &kp F2        &kp F3            &kp PAUSE_BREAK &none       &none             &none         &none       &none          &none
                                             &kp DEL      &kp BSPC      &kp RET      &trans        &none           &trans
                         >;
                 };
@@ -471,9 +471,9 @@
 //                         |  (0)  |       |       |     |       | KRPT  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &none         &none         &none       &none     &none     &none     &kp C_STOP  &kp C_PP    &kp C_VOL_UP   &none       &none         &amenmedne
-          &none         &none         &none       &none     &tog EPP  &none     &none       &kp C_PREV  &kp C_VOL_DN   &kp C_NEXT  &kp C_AL_LOCK &amenmede
-          &none         &none         &none       &none     &none     &none     &none       &none       &kp C_MUTE     &none       &none         &amenmedse
+          &none         &none         &none       &none     &none     &none     &kp C_STOP  &kp C_PP    &kp C_VOL_UP   &none       &none         &amenmednem
+          &none         &none         &none       &none     &tog EPP  &none     &none       &kp C_PREV  &kp C_VOL_DN   &kp C_NEXT  &kp C_AL_LOCK &amenmedem
+          &none         &none         &none       &none     &none     &none     &none       &none       &kp C_MUTE     &none       &none         &amenmedsem
                                              &trans        &none         &trans         &trans      &key_repeat   &none
                         >;
                 };
@@ -486,9 +486,9 @@
 //                         |       |       |  (0)  |     |  RCLK |  LCLK |  MCLK |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &kp LC(Y)     &kp ESC        &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp LC(Z)      &msc SCRL_UP     &msc SCRL_LEFT   &mmv MOVE_UP   &msc SCRL_RIGHT   &kp LC(A)      &amenmosne
-          &kp LC(LS(Z)) &kp LGUI       &kp LALT       &kp LSHFT      &kp LCTRL      &mo FMO        &msc SCRL_DOWN   &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &kp DEL        &amenmose
-          &none         &none          &none          &none          &none          &mo SMO        &kp BSPC         &kp SPACE        &kp RET        &mkp MB4          &mkp MB5       &amenmosse
+          &kp LC(Y)     &kp ESC        &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp LC(Z)      &msc SCRL_UP     &msc SCRL_LEFT   &mmv MOVE_UP   &msc SCRL_RIGHT   &kp LC(A)      &amenmosnem
+          &kp LC(LS(Z)) &kp LGUI       &kp LALT       &kp LSHFT      &kp LCTRL      &mo FMO        &msc SCRL_DOWN   &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &kp DEL        &amenmosem
+          &none         &none          &none          &none          &none          &mo SMO        &kp BSPC         &kp SPACE        &kp RET        &mkp MB4          &mkp MB5       &amenmossem
                                              &trans        &trans          &trans        &mkp RCLK      &mkp LCLK     &mkp MCLK
                         >;
                 };
