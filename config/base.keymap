@@ -389,14 +389,14 @@
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // | AMNW  |   [   |  7/(  |   8   |  9/)  |   ]   |     |       |   ,   | SPACE |   .   |  ESC  |       |
 // | AMW   |   ;   |   4   |   5   |   6   |   =   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
-// | AMSW  |   `   |   1   |   2   |   3   |   \   |     |       |       |       |       |       |       |
+// | AMSW  |   `   |   1   |   2   |   3   |   \   |     |       |       |       |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  ./,  |  0/&  |   -   |     |       |  (0)  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
           &amennumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
           &amennumwm   &kp SEMI      &kp N4        &kp N5        &kp N6            &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
-          &amennumswm  &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &none          &none
+          &amennumswm  &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &kp FSLH       &none
                                             &numdorc  &num0           &kp MINUS    &trans        &trans         &none
                         >;
                 };
@@ -449,14 +449,14 @@
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // |  </>  |  [/{  |  7/(  |   8   |  9/)  |  ]/}  |     |       |   ,   | SPACE |   .   |  ESC  |       |
 // |  @/#  |  ;/:  |  4/$  |   5   |  6/^  |   =   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
-// |       |  `/~  |  1/'  |   2   |   3   |   \   |     |       |       |       |       |       |       |
+// |       |  `/~  |  1/'  |   2   |   3   |   \   |     |       |       |       |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  ./,  |  0/&  |   -   |     |       |  (0)  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
           &rnumabr  &rnumlbr      &rnum7        &kp N8        &rnum9            &rnumrbr      &none         &kp QMARK         &kp SPACE     &kp SLASH  &kp ESC        &none
           &rnumat   &rnumscol     &rnum4        &kp N5        &rnum6            &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
-          &none     &rnumgrv      &rnum1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &none          &none
+          &none     &rnumgrv      &rnum1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &kp PIPE       &none
                                             &rnumdorc &rnum0          &kp MINUS    &trans        &trans          &none
                         >;
                 };
