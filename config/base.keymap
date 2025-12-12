@@ -318,7 +318,7 @@
                 key-positions = <12 23>;
                 layers = <ENG EPP X64>;
                 bindings = <&caps_word>;
-                require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
+                //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
         };
 
