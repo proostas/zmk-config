@@ -297,21 +297,21 @@
                 key-positions = <0 11>;
                 layers = <ENG EPP X64>;
                 bindings = <&to_russian>;
-                require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
+                //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_switch_to_eng {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <0 11>;
                 layers = <RUS>;
                 bindings = <&to_english>;
-                require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
+                //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_key_capslock {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <24 35>;
                 layers = <ENG EPP X64 RUS>;
                 bindings = <&kp CAPSLOCK>;
-                require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
+                //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_caps_word {
                 timeout-ms = <U_COMBO_TIMEOUT>;
