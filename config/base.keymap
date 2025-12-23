@@ -295,14 +295,14 @@
             combo_force_eng {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <36 41>;
-                layers = <ENG EPP X64>;
+                layers = <ENG EPP X64 GMK>;
                 bindings = <&kp U_TO_ENG_SCUT>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_switch_to_rus {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <0 11>;
-                layers = <ENG EPP X64>;
+                layers = <ENG EPP X64 GMK>;
                 bindings = <&to_russian>;
                 //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
@@ -316,14 +316,14 @@
             combo_key_capslock {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <24 35>;
-                layers = <ENG EPP X64 RUS>;
+                layers = <ENG EPP X64 GMK RUS>;
                 bindings = <&kp CAPSLOCK>;
                 //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_caps_word {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <12 23>;
-                layers = <ENG EPP X64>;
+                layers = <ENG EPP X64 GMK>;
                 bindings = <&caps_word>;
                 //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
