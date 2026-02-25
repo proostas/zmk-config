@@ -5,26 +5,24 @@
 
 #define ENG 0   // English - Colemak-DH
 #define EPP 1   // Antecedent Morph Cpp overlay
-#define X64 2   // Antecedent Morph x64 overlay
-#define GMK 3   // Antecedent Morph GNU Make overlay
-#define CMK 4   // Antecedent Morph CMake overlay
-#define ENN 5   // English navigation
-#define NUE 6   // English numerics
-#define SYE 7   // English symbols (shifted numerics)
-#define RUS 8   // Russian - Diktor
-#define RUN 9   // Russian navigation
-#define NUR 10  // Russian numerics
-#define SYR 11  // Russian symbols (shifted numerics)
-#define FUN 12  // Function keys
-#define FN2 13  // Extended Function keys
-#define MED 14  // Media controls
-#define MOS 15  // Mouse
-#define FMO 16  // Fast Mouse overlay
-#define SMO 17  // Slow Mouse overlay
-#define BTN 18  // Buttons for external pointing device
-#define BTO 19  // BT and outputs
-#define CTX 20  // Context
-#define DGR 21  // Dangerous behaviors
+#define CMK 2   // Antecedent Morph CMake overlay
+#define ENN 3   // English navigation
+#define NUE 4   // English numerics
+#define SYE 5   // English symbols (shifted numerics)
+#define RUS 6   // Russian - Diktor
+#define RUN 7   // Russian navigation
+#define NUR 8   // Russian numerics
+#define SYR 9   // Russian symbols (shifted numerics)
+#define FUN 10  // Function keys
+#define FN2 11  // Extended Function keys
+#define MED 12  // Media controls
+#define MOS 13  // Mouse
+#define FMO 14  // Fast Mouse overlay
+#define SMO 15  // Slow Mouse overlay
+#define BTN 16  // Buttons for external pointing device
+#define BTO 17  // BT and outputs
+#define CTX 18  // Context
+#define DGR 19  // Dangerous behaviors
 
 // Global U_ser settings
 #define U_TO_RUS_SCUT LC(LS(N2))
@@ -57,8 +55,6 @@
                      
 #include "mouse.dtsi"
 #include "antecedent_morph_cpp.dtsi"
-#include "antecedent_morph_x64.dtsi"
-#include "antecedent_morph_gmk.dtsi"
 #include "antecedent_morph_cmake.dtsi"
 #include "antecedent_morph_english.dtsi"
 #include "diktor.dtsi"
@@ -266,22 +262,12 @@
             ZMK_MACRO(off_amall,
                 wait-ms = <20>;
                 tap-ms = <20>;
-                bindings = <&tog_off EPP>, <&tog_off X64>, <&tog_off GMK>, <&tog_off CMK>;
+                bindings = <&tog_off EPP>, <&tog_off CMK>;
             )
             ZMK_MACRO(to_amcpp,
                 wait-ms = <20>;
                 tap-ms = <20>;
                 bindings = <&off_amall>, <&tog_on EPP>;
-            )
-            ZMK_MACRO(to_amx64,
-                wait-ms = <20>;
-                tap-ms = <20>;
-                bindings = <&off_amall>, <&tog_on X64>;
-            )
-            ZMK_MACRO(to_amgmk,
-                wait-ms = <20>;
-                tap-ms = <20>;
-                bindings = <&off_amall>, <&tog_on GMK>;
             )
             ZMK_MACRO(to_amcmk,
                 wait-ms = <20>;
@@ -302,14 +288,14 @@
             combo_force_eng {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <36 41>;
-                layers = <ENG EPP X64 GMK CMK>;
+                layers = <ENG EPP CMK>;
                 bindings = <&kp U_TO_ENG_SCUT>;
                 require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_switch_to_rus {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <0 11>;
-                layers = <ENG EPP X64 GMK CMK>;
+                layers = <ENG EPP CMK>;
                 bindings = <&to_russian>;
                 //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
@@ -323,14 +309,14 @@
             combo_key_capslock {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <24 35>;
-                layers = <ENG EPP X64 GMK CMK RUS>;
+                layers = <ENG EPP CMK RUS>;
                 bindings = <&kp CAPSLOCK>;
                 //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
             combo_caps_word {
                 timeout-ms = <U_COMBO_TIMEOUT>;
                 key-positions = <12 23>;
-                layers = <ENG EPP X64 GMK CMK>;
+                layers = <ENG EPP CMK>;
                 bindings = <&caps_word>;
                 //require-prior-idle-ms = <U_COMBO_STREAK_DECAY>;
             };
@@ -366,36 +352,6 @@
           &amcppnwm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppnem       
           &amcppwm  &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppem
           &amcppswm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amcppsem
-                                            &trans      &trans     &trans    &trans    &trans     &trans
-                        >;
-                };
-                am_x64_overlay {
-// ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// | AMNW  |   Q   |   W   |   F   |   P   |   B   |     |   J   |   L   |   U   |   Y   |   "   |  AMNE |
-// | AMW   |   A   |   R   |   S   |   T   |   G   |     |   M   |   N   |   E   |   I   |   O   |   AME |
-// | AMSW  |   Z   |   X   |   C   |   D   |   V   |     |   K   |   H   |   ,   |   .   |   /   |  AMSE |
-// ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
-//                         |  DEL  |  BKSP |  RET  |     |  TAB  | SPACE |  ESC  |
-//                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
-                        bindings = <
-          &amx64nwm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amx64nem       
-          &amx64wm  &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amx64em
-          &amx64swm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amx64sem
-                                            &trans      &trans     &trans    &trans    &trans     &trans
-                        >;
-                };
-                am_gmk_overlay {
-// ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// | AMNW  |   Q   |   W   |   F   |   P   |   B   |     |   J   |   L   |   U   |   Y   |   "   |  AMNE |
-// | AMW   |   A   |   R   |   S   |   T   |   G   |     |   M   |   N   |   E   |   I   |   O   |   AME |
-// | AMSW  |   Z   |   X   |   C   |   D   |   V   |     |   K   |   H   |   ,   |   .   |   /   |  AMSE |
-// ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
-//                         |  DEL  |  BKSP |  RET  |     |  TAB  | SPACE |  ESC  |
-//                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
-                        bindings = <
-          &amgmknwm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amgmknem       
-          &amgmkwm  &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amgmkem
-          &amgmkswm &trans        &trans        &trans        &trans            &trans         &trans        &trans           &trans        &trans       &trans        &amgmksem
                                             &trans      &trans     &trans    &trans    &trans     &trans
                         >;
                 };
@@ -642,14 +598,14 @@
                 };
                 context_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// |       |       |       |       |       |       |     |       |  X64  | GMAKE |       |       |       |
+// |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // |       |       |       |       |       |       |     |  EN   |  CPP  | CMAKE |       |       |       |
 // |       |       |       |       |       |       |     |       |       |       |       |       |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |       |  (1)  |  (0)  |     |       |       |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &none         &none       &none      &none     &none       &none         &none        &to_amx64   &to_amgmk    &none       &none      &none
+          &none         &none       &none      &none     &none       &none         &none        &none       &none        &none       &none      &none
           &none         &none       &none      &none     &none       &none         &off_amall   &to_amcpp   &to_amcmk    &none       &none      &none
           &none         &none       &none      &none     &none       &none         &none        &none       &none        &none       &none      &none
                                                &none     &trans      &trans        &none        &none       &none
