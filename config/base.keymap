@@ -54,9 +54,9 @@
                          39 40 41
                      
 #include "mouse.dtsi"
+#include "antecedent_morph_general.dtsi"
 #include "antecedent_morph_cpp.dtsi"
 #include "antecedent_morph_cmake.dtsi"
-#include "antecedent_morph_english.dtsi"
 #include "diktor.dtsi"
 
 &lt { 
@@ -334,9 +334,9 @@
 //                         |  DEL  |  BKSP |  RET  |     |  TAB  | SPACE |  ESC  |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amennwm  &kp Q         &kp W         &kp F         &kp P             &kp B         &kp J         &kp L            &kp U         &kp Y        &kp SQT       &amennem       
-          &amenwm   &lmt LGUI A   &lmt LALT R   &lsht LSHFT S &lmt LCTRL T      &kp G         &kp M         &rmt RCTRL N     &rsht RSHFT E &rmt RALT I  &rmt RGUI O   &amenem
-          &amenswm  &kp Z         &kp X         &kp C         &kp D             &kp V         &kp K         &kp H            &kp COMMA     &kp DOT      &kp FSLH      &amensem
+          &amgnnwm  &kp Q         &kp W         &kp F         &kp P             &kp B         &kp J         &kp L            &kp U         &kp Y        &kp SQT       &amgnnem       
+          &amgnwm   &lmt LGUI A   &lmt LALT R   &lsht LSHFT S &lmt LCTRL T      &kp G         &kp M         &rmt RCTRL N     &rsht RSHFT E &rmt RALT I  &rmt RGUI O   &amgnem
+          &amgnswm  &kp Z         &kp X         &kp C         &kp D             &kp V         &kp K         &kp H            &kp COMMA     &kp DOT      &kp FSLH      &amgnsem
                                             &lt MED DEL   &lt ENN BSPC   &mlt MOS RET   &lt SYE TAB   &lt NUE SPACE  &lt FUN ESC
                         >;
                 };
@@ -379,9 +379,9 @@
 //                         |       |  (0)  |       |     |  TAB  | SPACE |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &none     &kp ESC       &kp CAPS      &to_russian   &tog RUS          &none         &kp PG_UP     &kp HOME         &kp UP        &kp END      &kp INS       &amennavnem
-          &none     &kp LGUI      &kp LALT      &kp LSHFT     &kp LCTRL         &tog BTN      &kp PG_DN     &kp LEFT         &kp DOWN      &kp RIGHT    &kp DEL       &amennavem
-          &none     &none         &none         &none         &none             &none         &none         &caps_word       &kp K_CMENU   &none        &none         &amennavsem
+          &none     &kp ESC       &kp CAPS      &to_russian   &tog RUS          &none         &kp PG_UP     &kp HOME         &kp UP        &kp END      &kp INS       &amgnnavnem
+          &none     &kp LGUI      &kp LALT      &kp LSHFT     &kp LCTRL         &tog BTN      &kp PG_DN     &kp LEFT         &kp DOWN      &kp RIGHT    &kp DEL       &amgnnavem
+          &none     &none         &none         &none         &none             &none         &none         &caps_word       &kp K_CMENU   &none        &none         &amgnnavsem
                                             &none     &trans          &trans         &kp TAB       &kp SPACE       &none
                         >;
                 };
@@ -394,9 +394,9 @@
 //                         |  ./,  |  0/&  |   -   |     |       |  (0)  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amennumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
-          &amennumwm   &kp SEMI      &kp N4        &kp N5        &kp N6            &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
-          &amennumswm  &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &kp FSLH       &none
+          &amgnnumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
+          &amgnnumwm   &kp SEMI      &kp N4        &kp N5        &kp N6            &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &amgnnumswm  &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &none         &none      &kp FSLH       &none
                                             &numdorc  &num0           &kp MINUS    &trans        &trans         &none
                         >;
                 };
@@ -409,9 +409,9 @@
 //                         |   ,   |   &   |   _   |     |  (0)  |       |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amensymnwm &kp LBRC      &kp LPAR      &kp ASTERISK  &kp RPAR          &kp RBRC      &none         &none             &kp SPACE     &none      &kp ESC        &none           
-          &amensymwm  &kp COLON     &kp DOLLAR    &kp PERCENT   &kp CARET         &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
-          &amensymswm &kp TILDE     &kp EXCL      &kp AT_SIGN   &kp HASH          &kp PIPE      &none         &none             &none         &none      &none          &none
+          &amgnsymnwm &kp LBRC      &kp LPAR      &kp ASTERISK  &kp RPAR          &kp RBRC      &none         &none             &kp SPACE     &none      &kp ESC        &none           
+          &amgnsymwm  &kp COLON     &kp DOLLAR    &kp PERCENT   &kp CARET         &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &amgnsymswm &kp TILDE     &kp EXCL      &kp AT_SIGN   &kp HASH          &kp PIPE      &none         &none             &none         &none      &none          &none
                                             &kp COMMA  &kp AMPS     &kp UNDER    &trans        &trans          &trans
                         >;
                 };
@@ -485,9 +485,9 @@
 //                         |       |  BKSP |  RET  |     |       |       |  (0)  |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amenfunnwm &kp F12       &kp F7        &kp F8        &kp F9            &kp PSCRN       &none       &none             &mo FN2       &none       &kp ESC        &none   
-          &amenfunwm  &kp F11       &kp F4        &kp F5        &kp F6            &kp SLCK        &none       &kp RCTRL         &kp RSHFT     &kp RALT    &kp RGUI       &none
-          &amenfunswm &kp F10       &kp F1        &kp F2        &kp F3            &kp PAUSE_BREAK &none       &none             &none         &none       &none          &none
+          &amgnfunnwm &kp F12       &kp F7        &kp F8        &kp F9            &kp PSCRN       &none       &none             &mo FN2       &none       &kp ESC        &none   
+          &amgnfunwm  &kp F11       &kp F4        &kp F5        &kp F6            &kp SLCK        &none       &kp RCTRL         &kp RSHFT     &kp RALT    &kp RGUI       &none
+          &amgnfunswm &kp F10       &kp F1        &kp F2        &kp F3            &kp PAUSE_BREAK &none       &none             &none         &none       &none          &none
                                             &kp DEL      &kp BSPC      &kp RET      &trans        &none           &trans
                         >;
                 };
@@ -515,9 +515,9 @@
 //                         |  (0)  |       |       |     |       | KRPT  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &none         &none         &none       &none     &none     &none     &kp C_STOP  &kp C_PP    &kp C_VOL_UP   &none       &none         &amenmednem
-          &none         &none         &none       &none     &tog EPP  &none     &none       &kp C_PREV  &kp C_VOL_DN   &kp C_NEXT  &kp C_AL_LOCK &amenmedem
-          &none         &none         &none       &none     &none     &none     &none       &none       &kp C_MUTE     &none       &none         &amenmedsem
+          &none         &none         &none       &none     &none     &none     &kp C_STOP  &kp C_PP    &kp C_VOL_UP   &none       &none         &amgnmednem
+          &none         &none         &none       &none     &tog EPP  &none     &none       &kp C_PREV  &kp C_VOL_DN   &kp C_NEXT  &kp C_AL_LOCK &amgnmedem
+          &none         &none         &none       &none     &none     &none     &none       &none       &kp C_MUTE     &none       &none         &amgnmedsem
                                              &trans        &none         &trans         &trans      &key_repeat   &none
                         >;
                 };
@@ -530,9 +530,9 @@
 //                         |       |       |  (0)  |     |  RCLK |  LCLK |  MCLK |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &kp LC(Y)     &kp ESC        &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp LC(Z)      &msc SCRL_UP     &msc SCRL_LEFT   &mmv MOVE_UP   &msc SCRL_RIGHT   &kp LC(A)      &amenmosnem
-          &kp LC(LS(Z)) &kp LGUI       &kp LALT       &kp LSHFT      &kp LCTRL      &mo FMO        &msc SCRL_DOWN   &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &kp DEL        &amenmosem
-          &none         &none          &none          &none          &none          &mo SMO        &kp BSPC         &kp SPACE        &kp RET        &mkp MB4          &mkp MB5       &amenmossem
+          &kp LC(Y)     &kp ESC        &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp LC(Z)      &msc SCRL_UP     &msc SCRL_LEFT   &mmv MOVE_UP   &msc SCRL_RIGHT   &kp LC(A)      &amgnmosnem
+          &kp LC(LS(Z)) &kp LGUI       &kp LALT       &kp LSHFT      &kp LCTRL      &mo FMO        &msc SCRL_DOWN   &mmv MOVE_LEFT   &mmv MOVE_DOWN &mmv MOVE_RIGHT   &kp DEL        &amgnmosem
+          &none         &none          &none          &none          &none          &mo SMO        &kp BSPC         &kp SPACE        &kp RET        &mkp MB4          &mkp MB5       &amgnmossem
                                              &trans        &trans          &trans        &mkp RCLK      &mkp LCLK     &mkp MCLK
                         >;
                 };
