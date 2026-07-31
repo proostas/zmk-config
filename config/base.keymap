@@ -196,6 +196,20 @@
                 bindings = <&kp LESS_THAN>, <&kp GREATER_THAN>;
                 mods = <(MOD_RSFT)>;
             };
+            num4: numeric_4 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "NUMERIC_4";
+                #binding-cells = <0>;
+                bindings = <&kp N4>, <&kp CARET>;
+                mods = <(MOD_RSFT)>;
+            };
+            num6: numeric_6 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "NUMERIC_6";
+                #binding-cells = <0>;
+                bindings = <&kp N6>, <&kp DOLLAR>;
+                mods = <(MOD_RSFT)>;
+            };
             num7: numeric_7 {
                 compatible = "zmk,behavior-mod-morph";
                 label = "NUMERIC_7";
@@ -409,14 +423,14 @@
                 english_number_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // | AMNW  |   [   |  7/(  |   8   |  9/)  |   ]   |     |       |   ,   | SPACE |   .   |  ESC  |       |
-// | AMW   |   ;   |   4   |   5   |   6   |   =   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
+// | AMW   |   ;   |  4/^  |   5   |  6/$  |   =   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
 // | AMSW  |   `   |   1   |   2   |   3   |   \   |     |       |       | RET   |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  ./,  |  0/&  |   -   |     |       |  (0)  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
           &amgnnumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
-          &amgnnumwm   &kp SEMI      &kp N4        &kp N5        &kp N6            &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &amgnnumwm   &kp SEMI      &num4         &kp N5        &num6             &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
           &amgnnumswm  &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &kp RET       &none      &kp FSLH       &none
                                             &numdorc  &num0           &kp MINUS    &trans        &trans         &none
                         >;
@@ -424,14 +438,14 @@
                 english_symbol_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // | AMNW  |   {   |   (   |   *   |   )   |   }   |     |       |       | SPACE |       |  ESC  |       |
-// | AMW   |   :   |   $   |   %   |   ^   |   +   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
+// | AMW   |   :   |   ^   |   %   |   $   |   +   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
 // | AMSW  |   ~   |   !   |   @   |   #   |   |   |     |       |       |       |       |       |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |   ,   |   &   |   _   |     |  (0)  |       |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
           &amgnsymnwm &kp LBRC      &kp LPAR      &kp ASTERISK  &kp RPAR          &kp RBRC      &none         &none             &kp SPACE     &none      &kp ESC        &none           
-          &amgnsymwm  &kp COLON     &kp DOLLAR    &kp PERCENT   &kp CARET         &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &amgnsymwm  &kp COLON     &kp CARET     &kp PERCENT   &kp DOLLAR        &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
           &amgnsymswm &kp TILDE     &kp EXCL      &kp AT_SIGN   &kp HASH          &kp PIPE      &none         &none             &none         &none      &none          &none
                                             &kp COMMA  &kp AMPS     &kp UNDER    &trans        &trans          &trans
                         >;
@@ -469,7 +483,7 @@
                 russian_number_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // |  </>  |  [/{  |  7/(  |   8   |  9/)  |  ]/}  |     |       |   ,   | SPACE |   .   |  ESC  |       |
-// |  @/#  |  ;/:  |  4/$  |   5   |  6/^  |   =   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
+// |  @/#  |  ;/:  |  4/^  |   5   |  6/$  |   =   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
 // |       |  `/~  |  1/'  |   2   |   3   |   \   |     |       |       | RET   |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  ./,  |  0/&  |   -   |     |       |  (0)  |       |
@@ -484,14 +498,14 @@
                 russian_symbol_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
 // |   >   |   {   |   (   |   *   |   )   |   }   |     |       |       | SPACE |       |  ESC  |       |
-// |   #   |   :   |   $   |   %   |   ^   |   +   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
+// |   #   |   :   |   ^   |   %   |   $   |   +   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
 // |       |   ~   |   '   |   "   |   №   |   /   |     |       |       |       |       |       |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |   ,   |   &   |   _   |     |  (0)  |       |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
           &engkp GT   &engkp LBRC  &kp LPAR      &kp STAR      &kp RPAR          &engkp RBRC   &none         &none             &kp SPACE     &none      &kp ESC        &none
-          &engkp HASH &kp CARET    &engkp DLLR   &kp PRCNT     &engkp CARET      &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &engkp HASH &kp CARET    &engkp CARET  &kp PRCNT     &engkp DLLR       &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
           &none       &engkp TILDE &engkp SQT    &kp AT_SIGN   &kp HASH          &kp PIPE      &none         &none             &none         &none      &none          &none
                                             &kp QMARK  &engkp AMPS      &kp UNDER    &trans        &trans          &trans
                         >;

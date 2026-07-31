@@ -415,14 +415,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "RUS_NUMERIC_4";
             #binding-cells = <0>;
-            bindings = <&kp N4>, <&engkp DOLLAR>;
+            bindings = <&kp N4>, <&engkp CARET>;
             mods = <(MOD_RSFT)>;
         };
         rnum6: russian_numeric_6 {
             compatible = "zmk,behavior-mod-morph";
             label = "RUS_NUMERIC_6";
             #binding-cells = <0>;
-            bindings = <&kp N6>, <&engkp CARET>;
+            bindings = <&kp N6>, <&engkp DOLLAR>;
             mods = <(MOD_RSFT)>;
         };
         rnumgrv: russian_numeric_grave {
