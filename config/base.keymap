@@ -239,6 +239,135 @@
                 bindings = <&kp N0>, <&kp AMPERSAND>;
                 mods = <(MOD_RSFT)>;
             };
+            
+            // English Symbol layer
+            inum1: inv_numeric_1 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_1";
+                #binding-cells = <0>;
+                bindings = <&kp EXCL>, <&kp N1>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum2: inv_numeric_2 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_2";
+                #binding-cells = <0>;
+                bindings = <&kp AT_SIGN>, <&kp N2>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum3: inv_numeric_3 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_3";
+                #binding-cells = <0>;
+                bindings = <&kp HASH>, <&kp N3>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum4: inv_numeric_4 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_4";
+                #binding-cells = <0>;
+                bindings = <&kp CARET>, <&kp N4>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum5: inv_numeric_5 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_5";
+                #binding-cells = <0>;
+                bindings = <&kp PERCENT>, <&kp N5>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum6: inv_numeric_6 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_6";
+                #binding-cells = <0>;
+                bindings = <&kp DOLLAR>, <&kp N6>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum7: inv_numeric_7 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_7";
+                #binding-cells = <0>;
+                bindings = <&kp LPAR>, <&kp N7>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum8: inv_numeric_8 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_8";
+                #binding-cells = <0>;
+                bindings = <&kp ASTERISK>, <&kp N8>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum9: inv_numeric_9 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_9";
+                #binding-cells = <0>;
+                bindings = <&kp RPAR>, <&kp N9>;
+                mods = <(MOD_RSFT)>;
+            };
+            inum0: inv_numeric_0 {
+                compatible = "zmk,behavior-mod-morph";
+                label = "INUMERIC_0";
+                #binding-cells = <0>;
+                bindings = <&kp AMPERSAND>, <&kp N0>;
+                mods = <(MOD_RSFT)>;
+            };
+            iminus: inv_minus {
+                compatible = "zmk,behavior-mod-morph";
+                label = "IMINUS";
+                #binding-cells = <0>;
+                bindings = <&kp UNDER>, <&kp MINUS>;
+                mods = <(MOD_RSFT)>;
+            };
+            //  ,/.
+            numcord: numeric_comma_or_dot {
+                compatible = "zmk,behavior-mod-morph";
+                label = "NUMERIC_COMMA_OR_DOT";
+                #binding-cells = <0>;
+                bindings = <&kp COMMA>, <&kp DOT>;
+                mods = <(MOD_RSFT)>;
+            };
+            igrave: inv_grave {
+                compatible = "zmk,behavior-mod-morph";
+                label = "IGRAVE";
+                #binding-cells = <0>;
+                bindings = <&kp TILDE>, <&kp GRAVE>;
+                mods = <(MOD_RSFT)>;
+            };
+            ibslh: inv_bslh {
+                compatible = "zmk,behavior-mod-morph";
+                label = "IBSLH";
+                #binding-cells = <0>;
+                bindings = <&kp PIPE>, <&kp BSLH>;
+                mods = <(MOD_RSFT)>;
+            };
+            isemi: inv_semi {
+                compatible = "zmk,behavior-mod-morph";
+                label = "ISEMI";
+                #binding-cells = <0>;
+                bindings = <&kp COLON>, <&kp SEMI>;
+                mods = <(MOD_RSFT)>;
+            };
+            iequal: inv_equal {
+                compatible = "zmk,behavior-mod-morph";
+                label = "IEQUAL";
+                #binding-cells = <0>;
+                bindings = <&kp PLUS>, <&kp EQUAL>;
+                mods = <(MOD_RSFT)>;
+            };
+            ilbkt: inv_lbkt {
+                compatible = "zmk,behavior-mod-morph";
+                label = "ILBKT";
+                #binding-cells = <0>;
+                bindings = <&kp LBRC>, <&kp LBKT>;
+                mods = <(MOD_RSFT)>;
+            };
+            irbkt: inv_rbkt {
+                compatible = "zmk,behavior-mod-morph";
+                label = "IRBKT";
+                #binding-cells = <0>;
+                bindings = <&kp RBRC>, <&kp RBKT>;
+                mods = <(MOD_RSFT)>;
+            };
         };
 
         macros {
@@ -422,11 +551,11 @@
                 };
                 english_number_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// | AMNW  |   [   |  7/(  |   8   |  9/)  |   ]   |     |       |   ,   | SPACE |   .   |  ESC  |       |
-// | AMW   |   ;   |  4/^  |   5   |  6/$  |   =   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
-// | AMSW  |   `   |   1   |   2   |   3   |   \   |     |       |       | RET   |       |   /   |       |
+// | AMNW  |  [/{  |  7/(  |  8/*  |  9/)  |  ]/}  |     |       |   ,   | SPACE |   .   |  ESC  |       |
+// | AMW   |  ;/:  |  4/^  |  5/%  |  6/$  |  =/+  |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
+// | AMSW  |  `/~  |  1/!  |  2/@  |  3/#  |  \/|  |     |       |       | RET   |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
-//                         |  ./,  |  0/&  |   -   |     |       |  (0)  |       |
+//                         |  ./,  |  0/&  |  -/_  |     |       |  (0)  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
           &amgnnumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
@@ -437,17 +566,17 @@
                 };
                 english_symbol_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// | AMNW  |   {   |   (   |   *   |   )   |   }   |     |       |       | SPACE |       |  ESC  |       |
-// | AMW   |   :   |   ^   |   %   |   $   |   +   |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
-// | AMSW  |   ~   |   !   |   @   |   #   |   |   |     |       |       |       |       |       |       |
+// | AMNW  |  {/[  |  (/7  |  */8  |  )/9  |  }/]  |     |       |   ,   | SPACE |   .   |  ESC  |       |
+// | AMW   |  :/;  |  ^/4  |  %/5  |  $/6  |  +/=  |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
+// | AMSW  |  ~/`  |  !/1  |  @/2  |  #/3  |  |/\  |     |       |       | RET   |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
-//                         |   ,   |   &   |   _   |     |  (0)  |       |       |
+//                         |  ,/.  |  &/0  |  _/-  |     |  (0)  |       |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amgnsymnwm &kp LBRC      &kp LPAR      &kp ASTERISK  &kp RPAR          &kp RBRC      &none         &none             &kp SPACE     &none      &kp ESC        &none           
-          &amgnsymwm  &kp COLON     &kp CARET     &kp PERCENT   &kp DOLLAR        &kp PLUS      &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
-          &amgnsymswm &kp TILDE     &kp EXCL      &kp AT_SIGN   &kp HASH          &kp PIPE      &none         &none             &none         &none      &none          &none
-                                            &kp COMMA  &kp AMPS     &kp UNDER    &trans        &trans          &trans
+          &amgnsymnwm &ilbkt        &inum7        &inum8        &inum9            &irbkt        &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
+          &amgnsymwm  &isemi        &inum4        &inum5        &inum6            &iequal       &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
+          &amgnsymswm &igrave       &inum1        &inum2        &inum3            &ibslh        &none         &none             &kp RET       &none      &kp FSLH       &none
+                                            &numcord  &inum0     &iminus       &trans        &trans          &trans
                         >;
                 };
                 russian_layer {
