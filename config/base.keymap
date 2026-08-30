@@ -29,6 +29,8 @@
 #define U_TO_RUS_SCUT LC(LS(N2))
 #define U_TO_ENG_SCUT LC(LS(N1))
 
+#define U_TMUXP RC(B)
+
 #define U_TAPPING_TERM 300
 #define U_QUICK_TAP 0
 #define U_STREAK_DECAY 150
@@ -536,14 +538,14 @@
                 };
                 english_nav_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// |       |  ESC  | CAPS  |  RUS  |       |       |     | PG_UP | HOME  |  UP   |  END  |  INS  |  AMNE |
+// |       |  ESC  | CAPS  |  RUS  |       | TMUXP |     | PG_UP | HOME  |  UP   |  END  |  INS  |  AMNE |
 // |       |  LGUI | LALT  | LSHFT | LCTRL |  BTN  |     | PG_DN | LEFT  | DOWN  | RIGHT |  DEL  |   AME |
 // |       |       |       |       |       |       |     |       | CWORD | RET   | MENU  |       |  AMSE |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |       |  (0)  |       |     |  TAB  | SPACE |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &none     &kp ESC       &kp CAPS      &to_russian   &tog RUS          &none         &kp PG_UP     &kp HOME         &kp UP        &kp END      &kp INS       &amgnnavnem
+          &none     &kp ESC       &kp CAPS      &to_russian   &tog RUS          &kp U_TMUXP   &kp PG_UP     &kp HOME         &kp UP        &kp END      &kp INS       &amgnnavnem
           &none     &kp LGUI      &kp LALT      &kp LSHFT     &kp LCTRL         &tog BTN      &kp PG_DN     &kp LEFT         &kp DOWN      &kp RIGHT    &kp DEL       &amgnnavem
           &none     &none         &none         &none         &none             &none         &none         &caps_word       &kp RET       &kp K_CMENU  &none         &amgnnavsem
                                             &none     &trans          &trans         &kp TAB       &kp SPACE       &none
