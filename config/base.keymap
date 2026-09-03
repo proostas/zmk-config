@@ -553,14 +553,14 @@
                 };
                 english_number_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// | AMNW  |  [/{  |  7/(  |  8/*  |  9/)  |  ]/}  |     |       |   ,   | SPACE |   .   |  ESC  |       |
+// | AMNW  |  [/{  |  7/(  |  8/*  |  9/)  |  ]/}  |     | TMUXP |   ,   | SPACE |   .   |  ESC  |       |
 // | AMW   |  ;/:  |  4/^  |  5/%  |  6/$  |  =/+  |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
 // | AMSW  |  `/~  |  1/!  |  2/@  |  3/#  |  \/|  |     |       |       | RET   |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  ./,  |  0/&  |  -/_  |     |       |  (0)  |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amgnnumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
+          &amgnnumnwm  &kp LBKT      &num7         &kp N8        &num9             &kp RBKT      &kp U_TMUXP   &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
           &amgnnumwm   &kp SEMI      &num4         &kp N5        &num6             &kp EQUAL     &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
           &amgnnumswm  &kp GRAVE     &kp N1        &kp N2        &kp N3            &kp BSLH      &none         &none             &kp RET       &none      &kp FSLH       &none
                                             &numdorc  &num0           &kp MINUS    &trans        &trans         &none
@@ -568,14 +568,14 @@
                 };
                 english_symbol_layer {
 // ╭───────┬───────┬───────┬───────┬───────┬───────╮     ╭───────┬───────┬───────┬───────┬───────┬───────╮
-// | AMNW  |  {/[  |  (/7  |  */8  |  )/9  |  }/]  |     |       |   ,   | SPACE |   .   |  ESC  |       |
+// | AMNW  |  {/[  |  (/7  |  */8  |  )/9  |  }/]  |     | TMUXP |   ,   | SPACE |   .   |  ESC  |       |
 // | AMW   |  :/;  |  ^/4  |  %/5  |  $/6  |  +/=  |     |  BKSP | RCTRL | RSHFT |  RALT |  RGUI |       |
 // | AMSW  |  ~/`  |  !/1  |  @/2  |  #/3  |  |/\  |     |       |       | RET   |       |   /   |       |
 // ╰───────┴───────┴───────┼───────┼───────┼───────┤     ├───────┼───────┼───────┼───────────────────────╯
 //                         |  ,/.  |  &/0  |  _/-  |     |  (0)  |       |       |
 //                         ╰───────┴───────┴───────╯     ╰───────┴───────┴───────╯
                         bindings = <
-          &amgnsymnwm &ilbkt        &inum7        &inum8        &inum9            &irbkt        &none         &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
+          &amgnsymnwm &ilbkt        &inum7        &inum8        &inum9            &irbkt        &kp U_TMUXP   &kp COMMA         &kp SPACE     &kp DOT    &kp ESC        &none           
           &amgnsymwm  &isemi        &inum4        &inum5        &inum6            &iequal       &kp BSPC      &kp RCTRL         &kp RSHFT     &kp RALT   &kp RGUI       &none
           &amgnsymswm &igrave       &inum1        &inum2        &inum3            &ibslh        &none         &none             &kp RET       &none      &kp FSLH       &none
                                             &numcord  &inum0     &iminus       &trans        &trans          &trans
